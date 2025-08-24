@@ -42,8 +42,8 @@ export default function RootLayout({
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-white hover:underline">
-                <FaGithub size={40} href="https://github.com/Sundaram-Katare"/>
+              <Link href="/" className="text-white hover:underline">
+                <FaGithub size={40} href="https://github.com/Sundaram-Katare/CLI-Guru"/>
               </Link>
             </li>
           </ul>
