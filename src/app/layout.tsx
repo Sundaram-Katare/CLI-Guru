@@ -7,6 +7,7 @@ import { store } from "@/store/store";
 import Link from "next/link";
 import Button from "@mui/material/Button"
 import { FaGithub } from "react-icons/fa";
+import { Analytics } from "@vercel/analytics/next"
 
 // const geistSans = Geist({
 //   variable: "--font-geist-sans",
@@ -49,7 +50,8 @@ export default function RootLayout({
           </ul>
         </nav>
         {children}
-      </Provider>  
+        <Analytics />
+      </Provider>
       </body>
     </html>
   );
