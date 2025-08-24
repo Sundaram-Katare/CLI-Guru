@@ -24,7 +24,7 @@ export default function Home() {
           transition={{ duration: 0.9 }}
         >CLI Guru</motion.h1>
 
-        <h2 className="text-4xl font-bold mb-4">Your Command Line Helper</h2>
+        <h2 className="text-4xl font-bold mb-4">AI Powered Command Line Helper</h2>
 
         <Link className="bg-blue-500 text-white text-2xl px-4 py-2 rounded mt-8 cursor-pointer hover:bg-blue-300"
               href={"/selection"}
