@@ -30,22 +30,27 @@ const steps = [
 export default function HowItWorks() {
     return (
         <>
-         <motion.div className="flex flex-col p-8 m-4 min-h-screen justify-center items-center">
-            <h2 className="text-6xl text-center font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-gray-500 via-white">How It Works</h2>
-            <motion.div className="grid grid-cols-3 gap-4">
-                {steps.map((step) => (
-                    <motion.div key={step.num} className="bg-white p-4 rounded-lg shadow text-center hover:scale-105 transition-transform duration-300 cursor-pointer"
-                                initial={{ opacity: 0, y: 100 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.5 }}
-                    >
-                        <h2 className="text-2xl font-bold text-black text-center">{step.num}</h2>
-                        <h3 className="text-xl font-bold text-center text-black">{step.title}</h3>
-                        <p className="text-gray-600">{step.description}</p>
-                    </motion.div>
-                ))}
+            <motion.div className="flex flex-col p-6 sm:p-8 m-2 sm:m-4 min-h-screen justify-center items-center">
+                <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-center font-extrabold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-gray-500 to-gray-500 via-white">
+                    How It Works
+                </h2>
+
+                <motion.div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 w-full max-w-6xl">
+                    {steps.map((step) => (
+                        <motion.div
+                            key={step.num}
+                            className="bg-white p-4 sm:p-6 rounded-lg shadow text-center hover:scale-105 transition-transform duration-300 cursor-pointer"
+                            initial={{ opacity: 0, y: 100 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.5 }}
+                        >
+                            <h2 className="text-xl sm:text-2xl font-bold text-black">{step.num}</h2>
+                            <h3 className="text-lg sm:text-xl font-bold text-black">{step.title}</h3>
+                            <p className="text-sm sm:text-base text-gray-600">{step.description}</p>
+                        </motion.div>
+                    ))}
+                </motion.div>
             </motion.div>
-         </motion.div>
         </>
     )
 }
